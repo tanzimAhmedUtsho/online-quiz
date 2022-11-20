@@ -1,15 +1,26 @@
-import logo from "./logo.svg";
 import "./App.css";
 import Header from "./components/Header/Header";
-import Banner from "./components/Banner/Banner";
-import QuizTopic from "./components/QuizTopic/QuizTopic";
+
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Home from "./components/Home/Home";
+import Quiz from "./components/Quiz/Quiz";
 
 function App() {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Home></Home>,
+    },
+    {
+      path: "/quiz/:quizId",
+      element: <Quiz></Quiz>,
+    },
+  ]);
   return (
     <div className="App">
       <Header></Header>
-      <Banner></Banner>
-      <QuizTopic></QuizTopic>
+
+      <RouterProvider router={router}></RouterProvider>
     </div>
   );
 }
