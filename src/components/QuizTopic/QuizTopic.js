@@ -41,9 +41,9 @@ const QuizTopic = () => {
                   Total Question:
                   {topic.total}
                 </Card.Text>
-                {/*  <Link to={`/quiz/${topic.id}`}>
+                <Link to={`/quiz/${topic.id}`}>
                   <Button className="w-100">Start Quiz</Button>
-                </Link> */}
+                </Link>
               </Card.Body>
             </Card>
           </Col>
