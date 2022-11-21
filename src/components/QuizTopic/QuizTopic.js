@@ -14,7 +14,7 @@ const QuizTopic = () => {
     const res = await axios.get(
       "https://openapi.programming-hero.com/api/quiz"
     );
-    console.log(res);
+
     setTopicList(res.data.data);
   };
   return (

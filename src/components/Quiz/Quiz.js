@@ -1,6 +1,8 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { useParams } from "react-router-dom";
+import { Card, Col, Row } from "react-bootstrap";
+import { Link, useParams } from "react-router-dom";
+import Question from "../Question/Question";
 
 const Quiz = () => {
   const [singleQuiz, setSingleQuiz] = useState({});
@@ -18,7 +20,10 @@ const Quiz = () => {
   };
   return (
     <div>
-      <h2>Quiz: {quizId} </h2>
+      <h2>Quiz: {singleQuiz.name} </h2>
+      {singleQuiz?.questions?.map((question) => (
+        <Question question={question}></Question>
+      ))}
     </div>
   );
 };
