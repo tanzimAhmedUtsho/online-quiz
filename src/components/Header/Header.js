@@ -4,6 +4,10 @@ import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
 
 function Header() {
+  const linkStyle = {
+    textDecoration: "none",
+    marginLeft: "20px",
+  };
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
@@ -12,10 +16,18 @@ function Header() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto"></Nav>
           <Nav>
-            <Link to="/">Home</Link>
-            <Link to="/topic">Topic</Link>
-            <Link to="/statistics">Statistics</Link>
-            <Link to="/blogs">Blog</Link>
+            <Link style={linkStyle} to="/">
+              Home
+            </Link>
+            <Link style={linkStyle} to="/topic">
+              Topic
+            </Link>
+            <Link style={linkStyle} to="/statistics">
+              Statistics
+            </Link>
+            <Link style={linkStyle} to="/blogs">
+              Blog
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
