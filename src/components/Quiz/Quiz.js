@@ -22,7 +22,7 @@ const Quiz = () => {
     <div>
       <h2>Quiz: {singleQuiz.name} </h2>
       {singleQuiz?.questions?.map((question) => (
-        <Question question={question}></Question>
+        <Question key={question.id} question={question}></Question>
       ))}
     </div>
   );
