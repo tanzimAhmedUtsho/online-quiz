@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { Card, Col, Row } from "react-bootstrap";
+
 import { Link, useParams } from "react-router-dom";
 import Question from "../Question/Question";
 
